@@ -18,10 +18,10 @@ let Rightbar = () => {
   },[])
     return (
     <div className='rightbar'>
-      <div className="tabs">
+      {/* <div className="tabs">
         <button>Artists</button>
         <button>Photographers</button>
-      </div>
+      </div> */}
       <div className="con">
 
         {

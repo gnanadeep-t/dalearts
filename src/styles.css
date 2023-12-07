@@ -91,13 +91,18 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
   }
   .rightbar .tabs{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     gap: 10px;
+    background-color: white;
+    margin: 10px;
   }
   .rightbar .con{
     width: 100%;
@@ -315,14 +320,14 @@ i {
     align-items: center;
     gap: 10px;
   }
-
-
   .photographs-card{
-    margin: 0px 10px;
-    padding: 10px;
+   padding: 10px;
+   margin: 0px 10px;
+   overflow: hidden;
   }
   .photographs-card>span{
-    width: 90%;
+    display: inline-block;
+    width: 80%;
     display: flex;
     margin-left: 10px;
     justify-content: space-between;
@@ -332,7 +337,7 @@ i {
     margin-left: 10px;
   }
   .photographs-card .img{
-    width: 100%;
+    width: 90%;
     height: 100px;
     border-radius: 1em;
     overflow: hidden;
@@ -345,21 +350,35 @@ i {
     font-size: 10px;
   }
   .ant-carousel{
-    width: 90%;
     margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
   }
 
   :where(.css-dev-only-do-not-override-qgg3xn).ant-carousel .slick-dots li button {
     background-color: gray
   }
-.rightbar .tabs{
-  margin: 10px;
 
+.slick-dots{
+  margin: -30px!important;
 }
+.slick-dots li button{
+  background: black!important;
+}
+
 .rightbar .tabs button{
   height: 30px;
   padding: 10px;
   line-height: 100%;
   text-align: center;
   vertical-align: center;
+}
+
+.tabs button{
+  background-color: rgb(137,194,186);
+  border: 0px;
+
 }

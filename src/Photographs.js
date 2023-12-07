@@ -7,8 +7,8 @@ import { Carousel } from 'antd';
 let Photographs=(props)=>{
     let [p,setP]=useState([])
     useEffect(()=>{
-        axios.get('https://dummyjson.com/products').then((res)=>{
-            setP(res.data.products)
+        axios.get('https://api.slingacademy.com/v1/sample-data/photos').then((res)=>{
+            setP(res.data.photos)
         })
     },[])    
 
@@ -16,14 +16,13 @@ let Photographs=(props)=>{
 
         <Carousel autoplay slidesToShow={3}>
         {
-            
           p.map((item)=>(
             <div className='photographs-card'>
-                <div className='img'><img src={item.images[0]}/></div>
-                <div className="title">{item.title}</div>
+                <div className='img'><img src={item.url}/></div>
+                <div className="title">{item.title.substring(1, 20)}</div>
                 <span>
-                    <div>{'$'+item.price}</div>
-                    <Rate disabled defaultValue={item.rating} style={{ fontSize:'14px',color:'rgb(248,185,79)'}} />
+                    <div>{'$'+item.user}</div>
+                    <Rate disabled defaultValue={item.id} style={{ fontSize:'14px',color:'rgb(248,185,79)'}} />
                 </span>
             </div>
         ))
